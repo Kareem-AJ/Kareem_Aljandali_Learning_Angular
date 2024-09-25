@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {Team} from "./interFaces/team";
 
 // @ts-ignore
 @Component({
@@ -13,4 +14,7 @@ export class AppComponent {
   title = 'KareemAljandaliLearningAngular';
   name : string = 'Kareem Aljandali';
   number : string = '19.5';
+
+
 }
+
