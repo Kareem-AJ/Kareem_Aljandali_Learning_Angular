@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-  <title> ME </title>
+  <title> Soccer Teams </title>
 </head>
 <body>
-<h1>Hello My name is {{name}}</h1>
-<h3>My age is {{number}} because my Birthday is at February</h3>
+<div *ngFor="let team of soccerTeams">
+ <h1>{{team.name}}</h1>
+  <h2>{{team.league}}, {{team.bestPlayer}}</h2>
+  <h3 *ngIf="team.winsChampionship == true">Champion</h3>
+
+
+
+</div>
 </body>
 </html>
