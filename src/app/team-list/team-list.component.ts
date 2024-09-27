@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import {Team} from "../interFaces/team";
 import {TeamListItemComponent} from "../team-list-item/team-list-item.component";
+import {style} from "@angular/animations";
 
 @Component({
   selector: 'app-team-list',
   standalone: true,
   imports: [
-    TeamListItemComponent
+    TeamListItemComponent,
   ],
   templateUrl: './team-list.component.html',
   styleUrl: './team-list.component.css'
@@ -21,4 +22,5 @@ export class TeamListComponent {
     {id:6, name:"Arsenal", league:"Primer league", bestPlayer:"Odegard", winsChampionship:true}
 
   ]
+  protected readonly style = style;
 }
