@@ -1,0 +1,8 @@
+.evenNumber{
+  background: cyan;
+  display: block;
+}
+.oddNumber{
+  background: bisque;
+  display: block;
+}
