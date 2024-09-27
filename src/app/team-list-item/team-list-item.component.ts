@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Team} from "../interFaces/team";
+import {TeamListComponent} from "../team-list/team-list.component";
 
 @Component({
   selector: 'app-team-list-item',
@@ -8,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './team-list-item.component.css'
 })
 export class TeamListItemComponent {
-
+  @Input() soccerTeam? : Team;
 }

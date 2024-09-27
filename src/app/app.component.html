@@ -4,13 +4,14 @@
   <title> Soccer Teams </title>
 </head>
 <body>
-<div *ngFor="let team of soccerTeams">
- <h1>{{team.name}}</h1>
-  <h2>{{team.league}}, {{team.bestPlayer}}</h2>
-  <h3 *ngIf="team.winsChampionship == true">Champion</h3>
+<app-team-list></app-team-list>
+<!--<div *ngFor="let team of soccerTeams">-->
+<!-- <h1>{{team.name}}</h1>-->
+<!--  <h2>{{team.league}}, {{team.bestPlayer}}</h2>-->
+<!--  <h3 *ngIf="team.winsChampionship == true">Champion</h3>-->
 
 
 
-</div>
+<!--</div>-->
 </body>
 </html>
