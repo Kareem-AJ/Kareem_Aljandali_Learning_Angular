@@ -28,28 +28,7 @@ export class TeamListComponent implements OnInit{
       next: (data: Team[]) => this.teamList = data
     })
   }
-  addTeam(newStudent:Team) : Observable<Team[]>{
-    this.teamList.push(newStudent)
-    return of(this.teamList);
-  }
-//Update an Existing user
-  updateTeam(updatedTeam: Team): Observable<Team[]> {
-    const index = this.teamList.findIndex(team => team.id === updatedTeam.id);
-    if (index !== -1) {
-      this.teamList[index] = updatedTeam;
-    }
-    return of(this.teamList);
-  }
-//Delete: Remove a user by ID
-  deleteTeam(teamId: number): Observable<Team[]> {
-    this.teamList = this.teamList.filter(team => team.id !== teamId);
-    return of(this.teamList);
-  }
-//Get team by ID
-  getTeamById(teamId: number): Observable<Team | undefined> {
-    const student = this.teamList.find(team => team.id === teamId);
-    return of(student);
-  }
+
 
 
   protected readonly soccerTeams = soccerTeams;
