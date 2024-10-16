@@ -2,6 +2,12 @@
 <html lang ="en">
 <head>
   <title> Soccer Teams </title>
+  <div class="nav-bar">
+    <nav>
+      <a routerLink="/teams" routerLinkActive="active"> Team List </a>
+      <a routerLink="/modify-team" routerLinkActive="active"> Modify Team </a>
+    </nav>
+  </div>
 </head>
 <body>
 <app-team-list-item [soccerTeam]="team" ></app-team-list-item>

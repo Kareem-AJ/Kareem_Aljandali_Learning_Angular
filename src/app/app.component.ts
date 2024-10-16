@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {Team} from "./interFaces/team";
 import {NgForOf, NgIf} from "@angular/common";
 import {TeamListComponent} from "./team-list/team-list.component";
@@ -10,7 +10,7 @@ import {TeamServiceService} from "./services/team-service.service";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, TeamListComponent, TeamListItemComponent],
+  imports: [RouterOutlet, NgForOf, NgIf, TeamListComponent, TeamListItemComponent, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

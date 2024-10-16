@@ -4,4 +4,5 @@ export interface Team{
   league:string;
   bestPlayer:string;
   winsChampionship?:boolean;
+  image: string;
 }

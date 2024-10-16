@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Team} from "../interFaces/team";
 import {TeamListItemComponent} from "../team-list-item/team-list-item.component";
 import {style} from "@angular/animations";
-import {NgClass, NgForOf} from "@angular/common";
+import {NgClass, NgForOf, NgOptimizedImage} from "@angular/common";
 import {TeamServiceService} from "../services/team-service.service";
 import {soccerTeams} from "../Data/mock-team";
 import {Observable, of} from "rxjs";
@@ -14,6 +14,7 @@ import {Observable, of} from "rxjs";
     TeamListItemComponent,
     NgForOf,
     NgClass,
+    NgOptimizedImage,
   ],
   templateUrl: './team-list.component.html',
   styleUrl: './team-list.component.css'
