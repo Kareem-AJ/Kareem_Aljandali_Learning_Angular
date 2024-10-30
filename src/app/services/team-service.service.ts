@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import  {soccerTeams} from "../Data/mock-team"
 import {Team} from "../interFaces/team";
 import {observableToBeFn} from "rxjs/internal/testing/TestScheduler";
 import {Observable, of} from "rxjs";
+import {soccerTeams} from "../Data/mock-team";
 
 @Injectable({
   providedIn: 'root'
