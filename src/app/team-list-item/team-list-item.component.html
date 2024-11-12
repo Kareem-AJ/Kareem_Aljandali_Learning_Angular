@@ -1,5 +1,7 @@
-<div>
-  <h1 style="border: 2px black solid">{{soccerTeam?.name}}</h1>
-
-  <img ngSrc="{{soccerTeam?.image}}" alt="" width="100%" height="100%">
+<div *ngIf="soccerTeam">
+  <h1 style="border: 2px black solid">{{soccerTeam.name}}</h1>
+  <h2>{{soccerTeam.league}}</h2>
+  <h3>{{soccerTeam.bestPlayer}}</h3>
+  <h4>{{soccerTeam.winsChampionship}}</h4>
+  <img [src]="soccerTeam.image" alt="" width="100%" height="100%">
 </div>

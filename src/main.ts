@@ -14,5 +14,6 @@ const routes: Routes = [
   { path: 'modify-team', component: ModifyListItemComponent},
   { path: '**', component: PageNotFoundComponent},
 ]
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes)],
+}).catch((err) => console.error(err));

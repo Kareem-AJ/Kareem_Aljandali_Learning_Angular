@@ -30,7 +30,4 @@ export class TeamListComponent implements OnInit{
     })
   }
 
-
-
-  protected readonly soccerTeams = soccerTeams;
 }

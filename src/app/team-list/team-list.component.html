@@ -1,2 +1,4 @@
-<app-team-list-item *ngFor="let team of soccerTeams; let i = index"  [soccerTeam]="team" [ngClass]="{'evenNumber': i % 2 === 0, 'oddNumber': i % 2 !== 0}"></app-team-list-item>
+<app-team-list-item *ngFor="let team of teamList; let i = index"  [soccerTeam]="team" [ngClass]="{'evenNumber': i % 2 === 0, 'oddNumber': i % 2 !== 0}">
+
+</app-team-list-item>
 

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {SoccerTeam} from "../Data/mock-team";
+
 import {TeamServiceService} from "../services/team-service.service";
 import {FormBuilder, FormGroup, FormsModule, Validators,ReactiveFormsModule} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
+
 import {NgIf} from "@angular/common";
 
 
@@ -18,59 +18,6 @@ import {NgIf} from "@angular/common";
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
-export class FormComponent implements OnInit{
-  teamForm: FormGroup;
-  team: SoccerTeam | undefined;
-  error: string | null = null;
-  constructor(
-    private fb: FormBuilder,
-    private route: ActivatedRoute,
-    private teamService: TeamServiceService,
-    private router: Router
-  ){
-    this.teamForm = this.fb.group({
-      id: [teamService.generateNewId()],
-      name: ['', Validators.required],
-      league: ['',Validators.required],
-      bestPlayer: ['',Validators.required],
-      winsChampionship: [false],
-      image: [null]
-    });
-  }
-  ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    if (id) {
-      this.teamService.getTeamById(id).subscribe({
-        next: team => {
-          if (team) {
-            this.teamForm.patchValue(team);
-          }
-        },
-        error: err => {
-          this.error = 'Error fetching team';
-          console.error("error fetching team:", err)
-        }
-      });
-    }
-  }
-  onSubmit(): void{
-    if(this.teamForm.valid){
-      const team: SoccerTeam = this.teamForm.value;
-      if (team.id) {
-        this.teamService.updateTeam(team).subscribe(() => this.router.navigate(['/teams']));
-      } else {
-        team.id = this.teamService.generateNewId();
-        this.teamService.addTeam(team).subscribe(() => this.router.navigate(['/teams']));
-      }
-    }
-  }
-  onDelete(): void{
-    const id = this.teamForm.value.id;
-    if (id) {
-      this.teamService.deleteTeam(id).subscribe(() => this.router.navigate(['/teams']));
-    }
-  }
-  navigateToTeamList(): void {
-    this.router.navigate(['/teams']);
-  }
+export class FormComponent {
+
 }
