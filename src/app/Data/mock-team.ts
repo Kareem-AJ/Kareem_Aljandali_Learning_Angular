@@ -1,11 +1,11 @@
 import {Team} from "../interFaces/team";
 
 export const soccerTeams: Team[] = [
-  {id:1, name:"Barcelona", league:"Laliga", bestPlayer:"Messi", winsChampionship:true, image: "assets/Barca.jpg"},
-  {id:2, name:"Real Madrid", league:"Laliga", bestPlayer:"Ronaldo", winsChampionship:true, image: "assets/Real.jpg"},
-  {id:3, name:"Man City", league:"Primer League", bestPlayer:"Kevin", winsChampionship:true, image: "assets/ManCity.jpg"},
-  {id:4, name:"Liverpool", league:"Primer league", bestPlayer:"Salah", winsChampionship:true, image: "assets/Liver.jpg"},
-  {id:5, name:"Man United", league:"Primer league", bestPlayer:"Bruno", winsChampionship:true, image: "assets/ManUnited.jpg"},
-  {id:6, name:"Arsenal", league:"Primer league", bestPlayer:"Odegard", winsChampionship:true, image: "assets/Arsenal.jpg"}
+  {id:1, name:"Barcelona", league:"Laliga", bestPlayer:"Messi", winsChampionship:true, image: 'images/Barca.jpg'},
+  {id:2, name:"Real Madrid", league:"Laliga", bestPlayer:"Ronaldo", winsChampionship:true, image: "public/Real.jpg"},
+  {id:3, name:"Man City", league:"Primer League", bestPlayer:"Kevin", winsChampionship:true, image: "ManCity.jpg"},
+  {id:4, name:"Liverpool", league:"Primer league", bestPlayer:"Salah", winsChampionship:true, image: "Liver.jpg"},
+  {id:5, name:"Man United", league:"Primer league", bestPlayer:"Bruno", winsChampionship:true, image: "ManUnited.jpg"},
+  {id:6, name:"Arsenal", league:"Primer league", bestPlayer:"Odegard", winsChampionship:true, image: "Arsenal.jpg"}
 ]
 

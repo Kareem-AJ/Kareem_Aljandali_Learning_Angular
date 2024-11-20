@@ -65,6 +65,20 @@ export class FormComponent implements OnInit{
       }
     }
   }
+
+  onAdd():void{
+      const team: Team = this.teamForm.value;
+      this.teamService.addTeam(team).subscribe(() => this.router.navigate(['/teams']))
+
+  }
+
+  onUpdate():void{
+    const id = this.teamForm.value.id;
+    if(id){
+      this.teamService.updateTeam(id).subscribe(() => this.router.navigate(['/teams']))
+    }
+  }
+
   onDelete(): void{
     const id = this.teamForm.value.id;
     if (id) {
