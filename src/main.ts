@@ -10,11 +10,12 @@ import {FormComponent} from "./app/form/form.component";
 
 
 const routes: Routes = [
+  {path:'', redirectTo:'/teams', pathMatch:'full'},
   { path: 'teams', component: TeamListComponent},
-  { path: 'teams/:id', component: TeamListItemComponent},
-  {path: 'form', component: FormComponent},
-  { path: 'modify-team', component: ModifyListItemComponent},
-  { path: '**', component: PageNotFoundComponent},
+  { path: 'teams/:id', loadComponent: () => import('./app/team-list-item/team-list-item.component').then(m=>m.TeamListItemComponent)},
+  {path: 'form', loadComponent: () => import('./app/form/form.component').then(m=>m.FormComponent)},
+  { path: 'modify-team', loadComponent: () => import('./app/modify-list-item/modify-list-item.component').then(m=>m.ModifyListItemComponent)},
+  { path: '**', loadComponent: () => import('./app/page-not-found/page-not-found.component').then(m=>m.PageNotFoundComponent)},
 ]
 bootstrapApplication(AppComponent, {providers:[provideRouter(routes)]})
   .catch((err) => console.error(err));
