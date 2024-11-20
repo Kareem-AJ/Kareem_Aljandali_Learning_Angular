@@ -36,4 +36,8 @@ export class TeamServiceService {
     const student = this.teams.find(team => team.id === teamId);
     return of(student);
   }
+
+  generateNewId():number{
+    return this.teams.length > 0 ? Math.max(...this.teams.map(team => team.id)) + 1: 1;
+  }
 }
